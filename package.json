@@ -79,6 +79,7 @@
   },
   "husky": {
     "hooks": {
+      "pre-commit": ".husky/pre-commit",
       "pre-push": "if [ \"$(git symbolic-ref --short HEAD)\" = \"master\" ] || [ \"$(git symbolic-ref --short HEAD)\" = \"dev\" ]; then echo \"Error: Cannot push to master or dev branch\" && exit 1; fi"
     }
   }
