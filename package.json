@@ -76,5 +76,11 @@
     "storybook": "^7.0.7",
     "storybook-dark-mode": "^3.0.0",
     "webpack": "^5.81.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": ".husky/pre-commit.sh",
+      "pre-push": ".husky/pre-push.sh"
+    }
   }
 }
