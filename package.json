@@ -76,12 +76,5 @@
     "storybook": "^7.0.7",
     "storybook-dark-mode": "^3.0.0",
     "webpack": "^5.81.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": ".husky/pre-commit",
-      "pre-push": "if [ \"$(git symbolic-ref --short HEAD)\" = \"master\" ] || [ \"$(git symbolic-ref --short HEAD)\" = \"dev\" ]; then echo \"Error: Cannot push to master or dev branch\" && exit 1; fi"
-    }
   }
-
 }
