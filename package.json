@@ -79,7 +79,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "./pre-commit.sh",
+      "pre-commit": "npm run format",
       "pre-push": ".husky/pre-push.sh"
     }
   }
