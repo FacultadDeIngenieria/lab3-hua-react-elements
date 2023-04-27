@@ -16,7 +16,7 @@ You will also see any lint errors in the console.
 
 ### `npm run storybook`
 
-Launches components storybook.\
+Launches components storybook.
 
 ### `npm test`
 
