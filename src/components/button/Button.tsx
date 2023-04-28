@@ -15,13 +15,13 @@ const stylingVariants = (variant?: Variant, size?: Size) => {
   let styleString = '';
   switch (variant) {
     case 'primary':
-      styleString += `background-color: ${COLORS.primary.main};`;
+      styleString += `background-color: ${COLORS.primary.main}; color: #FFFFFF;`;
       break;
     case 'secondary':
-      styleString += `background-color: ${COLORS.secondary.main};`;
+      styleString += `background-color: ${COLORS.secondary.main}; color: #FFFFFF;`;
       break;
     case 'error':
-      styleString += `background-color: ${COLORS.error.main};`;
+      styleString += `background-color: ${COLORS.error.main}; color: #FFFFFF;`;
       break;
     case 'grey':
       styleString += `background-color: ${COLORS.grey.main}; color: #000000;`;
@@ -57,8 +57,8 @@ const stylingVariants = (variant?: Variant, size?: Size) => {
 export const Button = styled(_Button)`
   ${(props: CustomButtonProps & ButtonProps) => stylingVariants(props.variant, props.size)}
   font-family: Gotham, sans-serif;
-  color: white;
   border-radius: 4px;
+  font-weight: bold;
   border: none;
   cursor: pointer;
 `;
