@@ -1,4 +1,9 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+if branch=$(git symbolic-ref --short HEAD 2>/dev/null); then
+  echo "Current branch: $branch"
+else
+  echo "Not currently on a branch"
+fi
 if [ "master" = "master" ] || [ "master" = "dev" ]; then echo "Error: Cannot push to master or dev branch" && exit 1; fi
