@@ -5,4 +5,10 @@ export const COLORS = {
   secondary: {
     main: '#50B848',
   },
+  error: {
+    main: '#E03C39',
+  },
+  grey: {
+    main: '#D9D9D9',
+  },
 };
