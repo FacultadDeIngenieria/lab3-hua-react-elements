@@ -1,38 +1,27 @@
-import React from 'react';
-import { Button } from 'reakit/Button';
-import './button.css';
+import { ButtonProps, Button as _Button } from 'reakit';
+import { COLORS } from '../../common/colors';
+import styled from '@emotion/styled';
 
-interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean;
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string;
-  /**
-   * How large should the button be?
-   */
-  size?: 'small' | 'medium' | 'large';
-  /**
-   * Button contents
-   */
-  label: string;
-  /**
-   * Optional click handler
-   */
-  onClick?: () => void;
+type Variant = 'primary' | 'secondary' | 'error' | 'grey';
+
+interface CustomButtonProps {
+  variant?: Variant;
 }
 
-/**
- * Primary UI component for user interaction
- */
-export const HUAButton = ({ primary = false, size = 'medium', backgroundColor, label, onClick }: ButtonProps) => {
-  const mode = primary ? 'button--primary' : 'button--secondary';
-  return (
-    <Button className={['button', `button--${size}`, mode].join(' ')} style={{ backgroundColor }} onClick={onClick}>
-      {label}
-    </Button>
-  );
+const stylingVariants = (variant?: Variant) => {
+  console.log(variant);
+  switch (variant) {
+    case 'primary':
+      return `background-color: ${COLORS.primary.main};
+        color: #fff;`;
+    case 'secondary':
+      return `background-color: ${COLORS.secondary.main};
+        color: #fff;`;
+  }
 };
+
+// Finish editing
+export const Button = styled(_Button)`
+  ${(props: CustomButtonProps & ButtonProps) => stylingVariants(props.variant)}
+  font-family: Gotham, sans-serif;
+`;
