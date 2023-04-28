@@ -15,16 +15,28 @@ const stylingVariants = (variant?: Variant, size?: Size) => {
   let styleString = '';
   switch (variant) {
     case 'primary':
-      styleString += `background-color: ${COLORS.primary.main}; color: #FFFFFF;`;
+      styleString += `background-color: ${COLORS.primary.main}; color: #FFFFFF;
+        &:hover {
+          background-color: ${COLORS.primary.light};
+        }`;
       break;
     case 'secondary':
-      styleString += `background-color: ${COLORS.secondary.main}; color: #FFFFFF;`;
+      styleString += `background-color: ${COLORS.secondary.main}; color: #FFFFFF;
+      &:hover {
+        background-color: ${COLORS.secondary.light};
+      }`;
       break;
     case 'error':
-      styleString += `background-color: ${COLORS.error.main}; color: #FFFFFF;`;
+      styleString += `background-color: ${COLORS.error.main}; color: #FFFFFF;
+      &:hover {
+        background-color: ${COLORS.error.light};
+      }`;
       break;
     case 'grey':
-      styleString += `background-color: ${COLORS.grey.main}; color: #000000;`;
+      styleString += `background-color: ${COLORS.grey.main}; color: #000000;
+      &:hover {
+        background-color: ${COLORS.grey.light};
+      }`;
       break;
     default:
       break;
