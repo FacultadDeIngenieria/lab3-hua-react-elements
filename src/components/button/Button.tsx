@@ -24,7 +24,7 @@ const stylingVariants = (variant?: Variant, size?: Size) => {
       styleString += `background-color: ${COLORS.error.main};`;
       break;
     case 'grey':
-      styleString += `background-color: ${COLORS.grey.main};`;
+      styleString += `background-color: ${COLORS.grey.main}; color: #000000;`;
       break;
     default:
       break;
@@ -59,7 +59,6 @@ export const Button = styled(_Button)`
   font-family: Gotham, sans-serif;
   color: white;
   border-radius: 4px;
-  padding: 10px;
   border: none;
   cursor: pointer;
 `;
