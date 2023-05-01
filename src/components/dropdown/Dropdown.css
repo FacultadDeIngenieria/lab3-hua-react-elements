@@ -1,0 +1,19 @@
+.dropdownContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4px;
+    width: 415px;
+    background: #FFFFFF;
+    border-bottom: 4px solid #2E3092;
+    border-radius: 8px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.dropdownContainer .select {
+    width: 100%;
+    min-width: 0;
+}
