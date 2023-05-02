@@ -5,6 +5,7 @@ import {
   FormGroup as _FormGroup,
   FormLabel as _FormLabel,
   FormError as _FormError,
+  FormSubmit as _FormSubmit,
 } from '@ariakit/react';
 import styled from '@emotion/styled';
 
@@ -62,6 +63,9 @@ export const FormError = styled(_FormError)`
   //Style here
 `;
 
+export const FormSubmit = styled(_FormSubmit)`
+  // Style here
+`;
 export const FormGroup = _FormGroup;
 export const Form = _Form;
 export const useFormStore = _useFormStore;

@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Form, FormError, FormInput, FormLabel, useFormStore } from './Form';
+import { Form, FormError, FormInput, FormLabel, FormSubmit, useFormStore } from './Form';
 
 const meta: Meta<typeof Form> = {
-  title: 'Form',
+  title: 'common/Form',
   component: Form,
   tags: ['autodocs'],
 };
@@ -18,11 +18,15 @@ export const HUAForm: Story = {
   // },
   render: () => {
     const store = useFormStore({ defaultValues: { name: '' } });
+
+    store.useSubmit((r) => alert(r.values.name));
+
     return (
       <Form store={store}>
         <FormLabel name={store.names.name}>Name</FormLabel>
         <FormInput name={store.names.name} />
         <FormError name={store.names.name} />
+        <FormSubmit>Submit</FormSubmit>
       </Form>
     );
   },
