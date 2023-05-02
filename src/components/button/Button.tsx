@@ -7,7 +7,6 @@ type Size = 'small' | 'medium' | 'large';
 
 interface CustomButtonProps {
   variant?: Variant;
-  onClick: () => void;
   size?: Size;
 }
 

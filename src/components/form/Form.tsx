@@ -1,6 +1,12 @@
-import { Input as _Input, InputProps } from 'reakit';
+import {
+  useFormStore as _useFormStore,
+  Form as _Form,
+  FormInput as _FormInput,
+  FormGroup as _FormGroup,
+  FormLabel as _FormLabel,
+  FormError as _FormError,
+} from '@ariakit/react';
 import styled from '@emotion/styled';
-import { COLORS } from '../../common/colors';
 
 type Variant = 'primary' | 'secondary' | 'error' | 'grey';
 type Size = 'small' | 'medium' | 'large';
@@ -44,6 +50,18 @@ const stylingVariants = (variant?: Variant, size?: Size) => {
   return styleString;
 };
 
-export const Input = styled(_Input)`
-  ${(props: CustomInputProps & InputProps) => stylingVariants(props.variant, props.size)}
+export const FormInput = styled(_FormInput)`
+  //Style here
 `;
+
+export const FormLabel = styled(_FormLabel)`
+  //Style Here
+`;
+
+export const FormError = styled(_FormError)`
+  //Style here
+`;
+
+export const FormGroup = _FormGroup;
+export const Form = _Form;
+export const useFormStore = _useFormStore;
