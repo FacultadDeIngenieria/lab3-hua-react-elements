@@ -1,11 +1,12 @@
 import type { Preview } from '@storybook/react';
+import { HUATheme } from '../src/components/theme/Theme';
 
 const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: '^on[A-Z].*' },
     darkMode: {
       // Set the initial theme
-      current: 'dark'
+      current: 'dark',
     },
     controls: {
       matchers: {
@@ -14,6 +15,13 @@ const preview: Preview = {
       },
     },
   },
+  decorators: [
+    (Story) => (
+      <HUATheme>
+        <Story />
+      </HUATheme>
+    ),
+  ],
 };
 
 export default preview;
