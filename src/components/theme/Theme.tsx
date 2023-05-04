@@ -1,5 +1,6 @@
 import { createTheme, ThemeProvider } from '@mui/material';
 import { ReactNode } from 'react';
+import { COLORS } from '../../common/colors';
 
 export const HUATheme = ({ children }: { children: ReactNode }) => (
   <ThemeProvider theme={theme}>{children}</ThemeProvider>
@@ -56,6 +57,35 @@ const theme = createTheme({
         input: {
           borderBottom: '4px solid',
           borderRadius: '4px',
+        },
+      },
+    },
+    MuiTableContainer: {
+      defaultProps: {
+        color: 'primary',
+      },
+      styleOverrides: {
+        root: {
+          backgroundColor: '#FFFFFF',
+          borderLeft: '4px solid' + COLORS.primary.main,
+          borderRadius: '8px',
+        },
+      },
+    },
+    MuiTableCell: {
+      styleOverrides: {
+        root: {
+          textAlign: 'left',
+          fontWeight: 'normal',
+          border: 'none',
+        },
+      },
+    },
+    MuiTableHead: {
+      styleOverrides: {
+        root: {
+          borderBottom: '1px solid' + COLORS.primary.main,
+          background: COLORS.grey.light,
         },
       },
     },
