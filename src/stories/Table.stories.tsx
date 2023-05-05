@@ -1,5 +1,4 @@
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
-import { v4 as uuid } from 'uuid';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '../';
 import { Meta, StoryObj } from '@storybook/react';
 
 type RowData = {
@@ -16,7 +15,7 @@ const generateRowsData = (): RowData[] => {
   const recentDates = Array.from({ length: 5 }, (_, i) => new Date(now.getTime() - i * 24 * 60 * 60 * 1000));
 
   return Array.from({ length: 5 }, (_, i) => ({
-    id: uuid().substr(0, 8),
+    id: 'id',
     fecha: recentDates[i],
     area: areas[i % areas.length],
     comentario: `${comentarios[i % comentarios.length]} en el ${areas[i % areas.length]}`,

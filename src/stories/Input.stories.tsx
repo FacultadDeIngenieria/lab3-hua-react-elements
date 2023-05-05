@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { FormControl, Input, InputLabel, TextField } from '@mui/material';
+import { FormControl, Input, InputLabel, TextField } from '../';
 
 const meta: Meta<typeof TextField> = {
   title: 'TextField',

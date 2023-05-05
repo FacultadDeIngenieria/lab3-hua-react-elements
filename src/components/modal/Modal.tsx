@@ -1,6 +1,6 @@
 import { Box } from '../box/index';
 import styled from '@emotion/styled';
-import { Typography } from '@mui/material';
+import { Typography } from '../../';
 import CloseIcon from '@mui/icons-material/Close';
 import { COLORS } from '../../common/colors';
 
