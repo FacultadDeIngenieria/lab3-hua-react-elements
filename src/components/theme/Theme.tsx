@@ -1,4 +1,4 @@
-import { createTheme, ThemeProvider } from '@mui/material';
+import { createTheme, ThemeProvider, Toolbar } from '../../';
 import { ReactNode } from 'react';
 import { COLORS } from '../../common/colors';
 
@@ -88,6 +88,12 @@ const theme = createTheme({
           background: COLORS.grey.light,
         },
       },
+    },
+    MuiAppBar: {
+      defaultProps: {
+        children: (props: any) => <Toolbar>{props.children}</Toolbar>,
+      },
+      styleOverrides: {},
     },
   },
 });

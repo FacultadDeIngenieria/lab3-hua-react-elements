@@ -1,4 +1,4 @@
-import { Box } from '../box/index';
+import { Box } from '../../';
 import styled from '@emotion/styled';
 import { Typography } from '../../';
 import CloseIcon from '@mui/icons-material/Close';
