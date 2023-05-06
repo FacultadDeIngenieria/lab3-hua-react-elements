@@ -11,6 +11,6 @@ export default meta;
 
 type Story = StoryObj<typeof TextField>;
 
-export const HUATextFiled: Story = {
-  render: () => <TextField label="Default" variant="standard" />,
+export const MIUTextFiled: Story = {
+  render: () => <TextField variant="standard" label="label" />,
 };

@@ -1,44 +1,43 @@
 import { styled } from '@mui/material/styles';
-import { Box, TextField as MuiTextField } from '@mui/material';
+import { TextField as MuiTextField } from '@mui/material';
+import { FormControl, Input, InputLabel } from '../../';
+import { COLORS } from '../../common/colors';
 
 type TextFieldProps = {
   label: string;
   helperText?: string;
-};
-
-export const TextFieldContainer = ({ label, helperText }: TextFieldProps) => {
-  return (
-    <Box>
-      <TextFieldLabel>{label}</TextFieldLabel>
-      <TextFieldInput type="text" />
-      {helperText && <TextFieldHelperText>{helperText}</TextFieldHelperText>}
-    </Box>
-  );
+  error?: string;
+  disable?: string;
+  color?: string;
 };
 
 export const TextField = styled(MuiTextField)({
   width: '100%',
-  margin: '8px 0',
+  margin: '100px 0',
 });
 
-export const TextFieldLabel = styled('label')({
-  display: 'block',
-  marginBottom: '4px',
-});
+interface TextFieldContainerProps {
+  children: React.ReactNode;
+}
 
-export const TextFieldInput = styled('input')({
-  width: '100%',
-  border: '1px solid #dcdcdc',
-  padding: '8px 12px',
-  borderRadius: '4px',
-  '&:focus': {
-    outline: 'none',
-    border: '1px solid #1976d2',
-  },
-});
+export const TextFieldContainer = ({ children }: TextFieldContainerProps) => {
+  return <Container>{children}</Container>;
+};
 
-export const TextFieldHelperText = styled('p')({
-  margin: '4px 0 0 0',
-  fontSize: '0.75rem',
-  color: '#666',
-});
+export const TextFieldLabel = ({ label }: TextFieldProps) => {
+  return <Label style={{ textAlign: 'start' }}> {label} </Label>;
+};
+
+export const TextFieldInput = () => {
+  return <InputField />;
+};
+
+const Container = styled(FormControl)`
+  border-bottom: none;
+`;
+
+const Label = styled(InputLabel)``;
+
+const InputField = styled(Input)`
+  border-bottom: none;
+`;

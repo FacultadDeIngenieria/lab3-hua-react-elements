@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { FormControl, Input, InputLabel, TextField } from '../';
+import { TextField } from '../../index';
+import { TextFieldContainer, TextFieldInput, TextFieldLabel } from './index';
 
 const meta: Meta<typeof TextField> = {
   title: 'TextField',
@@ -22,11 +23,9 @@ export const HUAInput: Story = {
     size: 'medium',
   },
   render: ({ color, size }) => (
-    <FormControl>
-      <InputLabel htmlFor="name" color={color}>
-        Name
-      </InputLabel>
-      <Input name="name" color={color} size={size} />
-    </FormControl>
+    <TextFieldContainer>
+      <TextFieldLabel label="Label" />
+      <TextFieldInput />
+    </TextFieldContainer>
   ),
 };
