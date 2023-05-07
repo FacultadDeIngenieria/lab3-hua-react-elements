@@ -4,11 +4,7 @@ import { theme } from '../theme/Theme';
 
 const Navbar = ({ children, sx }: AppBarProps) => {
   return (
-    <AppBar
-      sx={{
-        ...sx,
-      }}
-    >
+    <AppBar>
       <Toolbar>{children}</Toolbar>
     </AppBar>
   );
