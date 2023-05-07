@@ -2,7 +2,7 @@ import { AppBar, AppBarProps, Box, Toolbar } from '../..';
 import styled from '@emotion/styled';
 import { theme } from '../theme/Theme';
 
-const Navbar = ({ children, sx }: AppBarProps) => {
+const Navbar = ({ children }: AppBarProps) => {
   return (
     <AppBar>
       <Toolbar>{children}</Toolbar>
