@@ -20,7 +20,8 @@ const Group = styled(Box)`
 const MenuItem = styled(Box)`
   display: flex;
   align-items: center;
-  '&:hover' {
+  &:hover {
+    cursor: pointer;
     background-color: ${theme.palette.primary.light};
   }
 `;
