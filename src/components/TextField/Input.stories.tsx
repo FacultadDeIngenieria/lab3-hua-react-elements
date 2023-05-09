@@ -15,17 +15,29 @@ export const HUAInput: Story = {
   argTypes: {
     color: {
       control: 'select',
-      options: ['primary', 'secondary', 'error'],
+      options: ['primary', 'secondary', 'error', 'grey'],
+    },
+    title: {
+      control: 'text',
+    },
+    disabled: {
+      control: 'select',
+      options: [true, false],
+    },
+    placeholder: {
+      control: 'text',
     },
   },
   args: {
     color: 'primary',
-    size: 'medium',
+    title: undefined,
+    disabled: false,
+    placeholder: undefined,
   },
-  render: ({ color, size }) => (
+  render: ({ title, color, disabled, placeholder }) => (
     <TextFieldContainer>
-      <TextFieldLabel label="Label" />
-      <TextFieldInput />
+      <TextFieldLabel inputLabel={title} color={color} disable={disabled} />
+      <TextFieldInput color={color} disable={disabled} placeholder={placeholder} />
     </TextFieldContainer>
   ),
 };

@@ -2,13 +2,13 @@ import { styled } from '@mui/material/styles';
 import { TextField as MuiTextField } from '@mui/material';
 import { FormControl, Input, InputLabel } from '../../';
 import { COLORS } from '../../common/colors';
+import { grey } from '@mui/material/colors';
 
 type TextFieldProps = {
-  label: string;
-  helperText?: string;
-  error?: string;
-  disable?: string;
-  color?: string;
+  inputLabel?: string;
+  placeholder?: string;
+  disable?: boolean;
+  color: any;
 };
 
 export const TextField = styled(MuiTextField)({
@@ -24,20 +24,46 @@ export const TextFieldContainer = ({ children }: TextFieldContainerProps) => {
   return <Container>{children}</Container>;
 };
 
-export const TextFieldLabel = ({ label }: TextFieldProps) => {
-  return <Label style={{ textAlign: 'start' }}> {label} </Label>;
+export const TextFieldLabel = ({ inputLabel, color, disable }: TextFieldProps) => {
+  return (
+    <Label color={color} disabled={disable}>
+      {inputLabel}
+    </Label>
+  );
 };
 
-export const TextFieldInput = () => {
-  return <InputField />;
+export const TextFieldInput = ({ color, disable, placeholder }: TextFieldProps) => {
+  return (
+    <InputField
+      color={color}
+      disabled={disable}
+      placeholder={placeholder}
+      style={{ borderBottomColor: getColor({ color: color }) }}
+    />
+  );
 };
 
-const Container = styled(FormControl)`
-  border-bottom: none;
+function getColor({ color }: { color: any }) {
+  if (color === 'primary') {
+    return '#2E3092';
+  }
+  if (color === 'secondary') {
+    return '#50B848';
+  }
+  if (color === 'error') {
+    return '#E03C39';
+  }
+  return '#D9D9D9';
+}
+
+const Container = styled(FormControl)``;
+
+const Label = styled(InputLabel)`
+  text-align: start;
+  font-weight: bold;
 `;
 
-const Label = styled(InputLabel)``;
-
 const InputField = styled(Input)`
-  border-bottom: none;
+  border-bottom: 4px solid;
+  border-radius: 5px;
 `;

@@ -55,8 +55,9 @@ const theme = createTheme({
     MuiInput: {
       styleOverrides: {
         input: {
-          borderBottom: '4px solid',
-          borderRadius: '4px',
+          // borderBottom: '4px solid',
+          // borderBottomColor: '#2E3092',
+          // borderRadius: '5px',
         },
       },
     },
