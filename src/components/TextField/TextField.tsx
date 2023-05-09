@@ -26,7 +26,7 @@ export const TextFieldContainer = ({ children }: TextFieldContainerProps) => {
 
 export const TextFieldLabel = ({ inputLabel, color, disable }: TextFieldProps) => {
   return (
-    <Label color={color} disabled={disable}>
+    <Label color={color} disabled={disable} variant="standard">
       {inputLabel}
     </Label>
   );
