@@ -1,4 +1,4 @@
-import { createTheme, ThemeProvider, Toolbar } from '../../';
+import { createTheme, ThemeProvider } from '../../';
 import { ReactNode } from 'react';
 import { COLORS } from '../../common/colors';
 
@@ -6,7 +6,7 @@ export const HUATheme = ({ children }: { children: ReactNode }) => (
   <ThemeProvider theme={theme}>{children}</ThemeProvider>
 );
 
-const theme = createTheme({
+export const theme = createTheme({
   palette: {
     primary: {
       main: '#2E3092',
@@ -23,26 +23,36 @@ const theme = createTheme({
       main: '#E03C39',
       light: '#E57472',
     },
+    info: {
+      main: '#D9D9D9',
+      light: '#EDEDED',
+    },
   },
   typography: {
     fontFamily: 'Gotham, sans-serif',
     h1: {
       fontSize: '32px',
+      fontWeight: 'bold',
     },
     h2: {
       fontSize: '24px',
+      fontWeight: 'bold',
     },
     h3: {
       fontSize: '18.7px',
+      fontWeight: 'bold',
     },
     h4: {
       fontSize: '16px',
+      fontWeight: 'bold',
     },
     h5: {
+      fontWeight: 'bold',
       fontSize: '13.3px',
     },
     h6: {
       fontSize: '10.7px',
+      fontWeight: 'bold',
     },
   },
   components: {
@@ -153,10 +163,38 @@ const theme = createTheme({
       },
     },
     MuiAppBar: {
-      defaultProps: {
-        children: (props: any) => <Toolbar>{props.children}</Toolbar>,
+      styleOverrides: {
+        root: {
+          height: '64px',
+          boxShadow: 'none',
+        },
       },
-      styleOverrides: {},
+    },
+    MuiDialog: {
+      styleOverrides: {
+        paper: {
+          borderRadius: '8px',
+          borderTop: '4px solid' + COLORS.primary.main,
+          boxShadow: 'none',
+          maxHeight: 'none',
+          maxWidth: 'none',
+        },
+      },
+    },
+    MuiDialogTitle: {
+      styleOverrides: {
+        root: {
+          fontWeight: 'bold',
+          fontSize: '16px',
+        },
+      },
+    },
+    MuiDialogActions: {
+      styleOverrides: {
+        root: {
+          background: COLORS.grey.light,
+        },
+      },
     },
   },
 });
