@@ -53,11 +53,73 @@ const theme = createTheme({
       },
     },
     MuiInput: {
+      variants: [
+        {
+          props: { color: 'primary' },
+          style: {
+            borderBottomColor: COLORS.primary.main,
+          },
+        },
+        {
+          props: { color: 'secondary' },
+          style: { borderBottomColor: COLORS.secondary.main },
+        },
+        {
+          props: { color: 'error' },
+          style: { borderBottomColor: COLORS.error.main },
+        },
+        {
+          props: { disabled: true },
+          style: {
+            borderBottomColor: COLORS.grey.dark,
+            color: COLORS.grey.dark,
+          },
+        },
+      ],
       styleOverrides: {
-        input: {
-          // borderBottom: '4px solid',
-          // borderBottomColor: '#2E3092',
-          // borderRadius: '5px',
+        root: {
+          borderBottom: '4px solid',
+          borderRadius: '4px',
+          padding: '2px',
+          '&::before': {
+            border: 0,
+          },
+          '&:hover': {
+            '&::before': {
+              border: '0 !important',
+            },
+          },
+        },
+      },
+    },
+    MuiInputLabel: {
+      defaultProps: {
+        variant: 'standard',
+      },
+      variants: [
+        {
+          props: { color: 'primary' },
+          style: {
+            color: COLORS.primary.main,
+          },
+        },
+        {
+          props: { color: 'secondary' },
+          style: { color: COLORS.secondary.main },
+        },
+        {
+          props: { color: 'error' },
+          style: { color: COLORS.error.main },
+        },
+        {
+          props: { disabled: true },
+          style: { color: COLORS.grey.dark },
+        },
+      ],
+      styleOverrides: {
+        root: {
+          textAlign: 'start',
+          fontWeight: 'bold',
         },
       },
     },

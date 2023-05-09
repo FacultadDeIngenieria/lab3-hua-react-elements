@@ -11,24 +11,11 @@ const meta: Meta<typeof TextField> = {
 export default meta;
 type Story = StoryObj<typeof TextField>;
 
-function getColor({ color }: { color: any }) {
-  if (color === 'primary') {
-    return '#2E3092';
-  }
-  if (color === 'secondary') {
-    return '#50B848';
-  }
-  if (color === 'error') {
-    return '#E03C39';
-  }
-  return '#D9D9D9';
-}
-
 export const HUAInput: Story = {
   argTypes: {
     color: {
       control: 'select',
-      options: ['primary', 'secondary', 'error', 'grey'],
+      options: ['primary', 'secondary', 'error'],
     },
     title: {
       control: 'text',
@@ -43,25 +30,16 @@ export const HUAInput: Story = {
   },
   args: {
     color: 'primary',
-    title: undefined,
+    title: '',
     disabled: false,
-    placeholder: undefined,
+    placeholder: '',
   },
   render: ({ title, color, disabled, placeholder }) => (
-    <FormControl disabled={disabled}>
-      <InputLabel
-        disabled={disabled}
-        color={color}
-        variant="standard"
-        style={{ textAlign: 'start', fontWeight: 'bold' }}
-      >
+    <FormControl>
+      <InputLabel disabled={disabled} color={color}>
         {title}
       </InputLabel>
-      <Input
-        color={color}
-        placeholder={placeholder}
-        style={{ borderBottom: '4px solid', borderRadius: '5px', borderBottomColor: getColor({ color: color }) }}
-      />
+      <Input color={color} placeholder={placeholder} disabled={disabled} />
     </FormControl>
   ),
 };
