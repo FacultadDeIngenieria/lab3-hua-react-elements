@@ -95,5 +95,20 @@ const theme = createTheme({
       },
       styleOverrides: {},
     },
+    MuiAlert: {
+      styleOverrides: {
+        root: {
+          width: '233px',
+          height: '60px',
+        },
+        message: {
+          fontSize: '16px',
+          marginTop: '15px',
+        },
+        icon: {
+          marginTop: '15px',
+        },
+      },
+    },
   },
 });
