@@ -23,6 +23,10 @@ export const theme = createTheme({
       main: '#E03C39',
       light: '#E57472',
     },
+    info: {
+      main: '#D9D9D9',
+      light: '#EDEDED',
+    },
   },
   typography: {
     fontFamily: 'Gotham, sans-serif',
@@ -100,6 +104,32 @@ export const theme = createTheme({
         root: {
           height: '64px',
           boxShadow: 'none',
+        },
+      },
+    },
+    MuiDialog: {
+      styleOverrides: {
+        paper: {
+          borderRadius: '8px',
+          borderTop: '4px solid' + COLORS.primary.main,
+          boxShadow: 'none',
+          maxHeight: 'none',
+          maxWidth: 'none',
+        },
+      },
+    },
+    MuiDialogTitle: {
+      styleOverrides: {
+        root: {
+          fontWeight: 'bold',
+          fontSize: '16px',
+        },
+      },
+    },
+    MuiDialogActions: {
+      styleOverrides: {
+        root: {
+          background: COLORS.grey.light,
         },
       },
     },
