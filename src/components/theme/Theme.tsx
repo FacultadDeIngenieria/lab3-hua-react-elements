@@ -135,7 +135,15 @@ export const theme = createTheme({
     },
     MuiAutocomplete: {
       styleOverrides: {
-        root: {},
+        root: {
+          // color: COLORS.primary.main,
+          // borderTop: '0',
+          // borderRight: '0',
+          // borderLeft: '0',
+          // borderBottom: '4px solid',
+          // borderRadius: '4px',
+          // padding: '2px',
+        },
       },
     },
   },
