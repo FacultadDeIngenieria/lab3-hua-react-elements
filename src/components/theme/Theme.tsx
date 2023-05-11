@@ -66,7 +66,7 @@ export const theme = createTheme({
       styleOverrides: {
         input: {
           borderBottom: '4px solid',
-          borderRadius: '4px',
+          borderRadius: '8px',
         },
         root: {},
       },
@@ -136,15 +136,26 @@ export const theme = createTheme({
     },
     MuiAutocomplete: {
       styleOverrides: {
+        root: {
+          padding: '2px',
+          color: COLORS.primary.main,
+        },
         inputRoot: {
           color: COLORS.primary.main,
           borderTop: '0',
           borderRight: '0',
           borderLeft: '0',
           borderBottom: '4px solid',
-          borderRadius: '4px',
+          borderRadius: '8px',
           padding: '2px 2px 0px 2px',
           boxSizing: 'border-box',
+        },
+      },
+    },
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          color: COLORS.primary.main,
         },
       },
     },

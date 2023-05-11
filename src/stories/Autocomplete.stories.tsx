@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Autocomplete, InputBase, TextField } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const meta: Meta<typeof Autocomplete> = {
   title: 'Autocomplete',
