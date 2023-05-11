@@ -63,10 +63,81 @@ export const theme = createTheme({
       },
     },
     MuiInput: {
+      variants: [
+        {
+          props: { color: 'primary' },
+          style: {
+            borderBottomColor: COLORS.primary.main,
+          },
+        },
+        {
+          props: { color: 'secondary' },
+          style: { borderBottomColor: COLORS.secondary.main },
+        },
+        {
+          props: { color: 'error' },
+          style: { borderBottomColor: COLORS.error.main },
+        },
+        {
+          props: { disabled: true },
+          style: {
+            borderBottomColor: COLORS.grey.dark,
+            color: COLORS.grey.dark,
+          },
+        },
+      ],
       styleOverrides: {
         input: {
+          color: 'black',
+        },
+        root: {
           borderBottom: '4px solid',
-          borderRadius: '4px',
+          borderRadius: '8px',
+          padding: '2px',
+          paddingLeft: '4px',
+          '&::before': {
+            border: 0,
+          },
+          '&:hover': {
+            '&::before': {
+              border: '0 !important',
+            },
+          },
+        },
+      },
+    },
+    MuiInputLabel: {
+      defaultProps: {
+        variant: 'standard',
+      },
+      variants: [
+        {
+          props: { color: 'primary' },
+          style: {
+            color: COLORS.primary.main,
+          },
+        },
+        {
+          props: { color: 'secondary' },
+          style: { color: COLORS.secondary.main },
+        },
+        {
+          props: { color: 'error' },
+          style: { color: COLORS.error.main },
+        },
+        {
+          props: { disabled: true },
+          style: { color: COLORS.grey.dark },
+        },
+      ],
+      styleOverrides: {
+        root: {
+          textAlign: 'start',
+          fontWeight: 'bold',
+          borderRadius: '8px',
+          color: COLORS.primary.main,
+          padding: '2px',
+          paddingLeft: '8px',
         },
       },
     },
@@ -130,6 +201,31 @@ export const theme = createTheme({
       styleOverrides: {
         root: {
           background: COLORS.grey.light,
+        },
+      },
+    },
+    MuiAutocomplete: {
+      styleOverrides: {
+        root: {
+          padding: '4px',
+          color: COLORS.primary.main,
+        },
+        inputRoot: {
+          color: COLORS.primary.main,
+          borderTop: '0',
+          borderRight: '0',
+          borderLeft: '0',
+          borderBottom: '4px solid',
+          borderRadius: '8px',
+          padding: '2px 2px 0px 2px',
+          boxSizing: 'border-box',
+        },
+      },
+    },
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          color: COLORS.primary.main,
         },
       },
     },

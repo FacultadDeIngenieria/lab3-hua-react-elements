@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { FormControl, Input, InputLabel, TextField } from '../';
+import { Input, InputLabel, TextField } from '../index';
+import { FormControl } from '@mui/material';
 
 const meta: Meta<typeof TextField> = {
   title: 'TextField',
@@ -16,17 +17,29 @@ export const HUAInput: Story = {
       control: 'select',
       options: ['primary', 'secondary', 'error'],
     },
+    title: {
+      control: 'text',
+    },
+    disabled: {
+      control: 'select',
+      options: [true, false],
+    },
+    placeholder: {
+      control: 'text',
+    },
   },
   args: {
     color: 'primary',
-    size: 'medium',
+    title: '',
+    disabled: false,
+    placeholder: '',
   },
-  render: ({ color, size }) => (
+  render: ({ title, color, disabled, placeholder }) => (
     <FormControl>
-      <InputLabel htmlFor="name" color={color}>
-        Name
+      <InputLabel disabled={disabled} color={color}>
+        {title}
       </InputLabel>
-      <Input name="name" color={color} size={size} />
+      <Input color={color} placeholder={placeholder} disabled={disabled} />
     </FormControl>
   ),
 };
