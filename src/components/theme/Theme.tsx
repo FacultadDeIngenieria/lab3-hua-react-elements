@@ -68,6 +68,7 @@ export const theme = createTheme({
           borderBottom: '4px solid',
           borderRadius: '4px',
         },
+        root: {},
       },
     },
     MuiTableContainer: {
@@ -135,14 +136,15 @@ export const theme = createTheme({
     },
     MuiAutocomplete: {
       styleOverrides: {
-        root: {
-          // color: COLORS.primary.main,
-          // borderTop: '0',
-          // borderRight: '0',
-          // borderLeft: '0',
-          // borderBottom: '4px solid',
-          // borderRadius: '4px',
-          // padding: '2px',
+        inputRoot: {
+          color: COLORS.primary.main,
+          borderTop: '0',
+          borderRight: '0',
+          borderLeft: '0',
+          borderBottom: '4px solid',
+          borderRadius: '4px',
+          padding: '2px 2px 0px 2px',
+          boxSizing: 'border-box',
         },
       },
     },
