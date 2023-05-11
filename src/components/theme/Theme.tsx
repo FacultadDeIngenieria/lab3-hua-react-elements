@@ -133,5 +133,10 @@ export const theme = createTheme({
         },
       },
     },
+    MuiAutocomplete: {
+      styleOverrides: {
+        root: {},
+      },
+    },
   },
 });
