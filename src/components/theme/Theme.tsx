@@ -94,6 +94,7 @@ export const theme = createTheme({
           borderBottom: '4px solid',
           borderRadius: '8px',
           padding: '2px',
+          paddingLeft: '4px',
           '&::before': {
             border: 0,
           },
@@ -135,6 +136,8 @@ export const theme = createTheme({
           fontWeight: 'bold',
           borderRadius: '8px',
           color: COLORS.primary.main,
+          padding: '2px',
+          paddingLeft: '8px',
         },
       },
     },
@@ -204,7 +207,7 @@ export const theme = createTheme({
     MuiAutocomplete: {
       styleOverrides: {
         root: {
-          padding: '2px',
+          padding: '4px',
           color: COLORS.primary.main,
         },
         inputRoot: {
