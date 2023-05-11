@@ -1,15 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
+import { Dialog, DialogActions, DialogContent, DialogTitle, Button } from '../';
 import CloseIcon from '@mui/icons-material/Close';
-import DialogTitle from '@mui/material/DialogTitle';
-import { Button } from '@mui/material';
 
 const meta: Meta<typeof Dialog> = {
   title: 'Modal',
   component: Dialog,
-  args: {},
+  tags: ['autodocs'],
 };
 
 export default meta;
