@@ -133,5 +133,35 @@ export const theme = createTheme({
         },
       },
     },
+
+    MuiAccordion: {
+      styleOverrides: {
+        root: {
+          ':before': {
+            backgroundColor: 'transparent',
+          },
+
+          border: '0px',
+          borderRadius: '8px',
+          marginBottom: '12px',
+        },
+      },
+    },
+    MuiAccordionSummary: {
+      styleOverrides: {
+        root: {
+          backgroundColor: COLORS.primary.main,
+          color: '#FFFFFF',
+          borderRadius: '8px',
+        },
+        expandIconWrapper: {
+          color: '#FFFFFF',
+        },
+        disabled: {
+          backgroundColor: COLORS.grey.light,
+          color: COLORS.grey.main,
+        },
+      },
+    },
   },
 });
