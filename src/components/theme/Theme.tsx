@@ -87,9 +87,12 @@ export const theme = createTheme({
         },
       ],
       styleOverrides: {
+        input: {
+          color: 'black',
+        },
         root: {
           borderBottom: '4px solid',
-          borderRadius: '4px',
+          borderRadius: '8px',
           padding: '2px',
           '&::before': {
             border: 0,
@@ -131,6 +134,7 @@ export const theme = createTheme({
           textAlign: 'start',
           fontWeight: 'bold',
           borderRadius: '8px',
+          color: COLORS.primary.main,
         },
       },
     },
