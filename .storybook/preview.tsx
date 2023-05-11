@@ -1,5 +1,5 @@
 import type { Preview } from '@storybook/react';
-import { HUATheme } from '../src/components/theme/Theme';
+import { HUATheme } from '../src';
 
 const preview: Preview = {
   parameters: {
