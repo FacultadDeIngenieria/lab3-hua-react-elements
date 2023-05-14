@@ -133,5 +133,15 @@ export const theme = createTheme({
         },
       },
     },
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          backgroundColor: COLORS.grey.light,
+        },
+        selected: {
+          backgroundColor: COLORS.primary.main,
+        },
+      },
+    },
   },
 });
