@@ -133,5 +133,22 @@ export const theme = createTheme({
         },
       },
     },
+    MuiTabs: {
+      styleOverrides: {
+        root: {
+          fontSize: '5vh',
+        },
+      },
+    },
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          backgroundColor: COLORS.grey.light,
+          width: '22.5vh',
+          height: '3vw',
+          fontSize: '2vh',
+        },
+      },
+    },
   },
 });
